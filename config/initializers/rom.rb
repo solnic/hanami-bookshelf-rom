@@ -11,9 +11,13 @@ module Bookshelf
     end
 
     def self.configuration
-      @configuration ||= ROM::Configuration.new(:sql, ENV.fetch('DATABASE_URL')).tap do |config|
+      @configuration ||= ROM::Configuration.new(:sql, ENV.fetch('DATABASE_URL'), options).tap do |config|
         config.auto_registration(Hanami.root.join('lib/bookshelf/persistence'), namespace: 'Bookshelf::Persistence')
       end
+    end
+
+    def self.options
+      { logger: Hanami.logger }
     end
   end
 end
