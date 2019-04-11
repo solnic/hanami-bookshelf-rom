@@ -15,7 +15,7 @@ module Web
 
         def call(params)
           if params.valid?
-            @book = Bookshelf::Repositories::BookRepository.new.create(params[:book])
+            @book = Bookshelf::Repositories[:Book].create(params[:book])
 
             redirect_to "/books"
           else

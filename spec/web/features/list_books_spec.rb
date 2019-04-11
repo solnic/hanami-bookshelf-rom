@@ -2,7 +2,7 @@ require "features_helper"
 
 RSpec.describe "List books" do
   let(:repository) do
-    Bookshelf::Repositories::BookRepository.new
+    Bookshelf::Repositories[:Book]
   end
 
   before do

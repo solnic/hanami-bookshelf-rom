@@ -3,7 +3,7 @@ RSpec.describe Web::Controllers::Books::Index do
 
   let(:action) { described_class.new }
   let(:params) { Hash[] }
-  let(:repository) { Bookshelf::Repositories::BookRepository.new }
+  let(:repository) { Bookshelf::Repositories[:Book] }
 
   after do
     repository.clear

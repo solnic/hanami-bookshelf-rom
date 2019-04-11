@@ -2,7 +2,7 @@ RSpec.describe Web::Controllers::Books::Create do
   let(:action) { described_class.new }
 
   let(:repository) do
-    Bookshelf::Repositories::BookRepository.new
+    Bookshelf::Repositories[:Book]
   end
 
   before do

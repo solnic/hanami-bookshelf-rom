@@ -2,7 +2,7 @@ require "features_helper"
 
 RSpec.describe "Add a book" do
   after do
-    Bookshelf::Repositories::BookRepository.new.clear
+    Bookshelf::Repositories[:Book].clear
   end
 
   it "can create a new book" do

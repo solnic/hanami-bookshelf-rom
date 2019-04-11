@@ -7,7 +7,7 @@ module Web
         expose :books
 
         def call(params)
-          @books = Bookshelf::Repositories::BookRepository.new.all
+          @books = Bookshelf::Repositories[:Book].all
         end
       end
     end

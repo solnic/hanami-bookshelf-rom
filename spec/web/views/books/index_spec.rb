@@ -5,7 +5,7 @@ RSpec.describe Web::Views::Books::Index do
   let(:rendered) { view.render }
 
   let(:book_entity) do
-    Bookshelf::Repositories::BookRepository.new.entity_class
+    Bookshelf::Repositories[:Book].entity_class
   end
 
   it "exposes #books" do
