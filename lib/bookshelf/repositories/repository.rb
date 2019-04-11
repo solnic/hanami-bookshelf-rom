@@ -5,10 +5,6 @@ module Bookshelf
     class Repository < ROM::Repository::Root
       struct_namespace Bookshelf::Entities
 
-      def self.[](relation)
-        Class.new(self) { root(relation) }
-      end
-
       def self.new
         super(Persistence.db)
       end
