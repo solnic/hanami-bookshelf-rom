@@ -5,7 +5,7 @@ This is the bookshelf hanami application based on [the official Getting Started 
 - hanami-model was replaced with a standalone rom-rb setup
 - entities are under `Bookshelf::Entities` namespace
 - repositories are under `Bookshelf::Repositories` namespace
-- repository instances can be accessed through a convenient `Bookshelf::Repositories.[EntityName]` shortcut
+- repository instances can be accessed through a convenient method, ie `Bookshelf::Repositories[:Book]`
 - `DELETE /books/:id` was also implemented
 
 ## rom-rb setup
